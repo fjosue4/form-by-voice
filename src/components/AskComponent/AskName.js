@@ -39,8 +39,6 @@ function AskName () {
       useEffect(()=> {
         startRecording();
         setTimeout(finishRecording, 5000);
-        
-        console.log(mediaBlobUrl)
       },[])
 
       function finishRecording() {
