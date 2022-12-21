@@ -1,0 +1,8 @@
+@media screen and (max-width: 600px) {
+    .result-summary {
+        padding: 2rem 1rem;
+    }
+    .final-result, .center-box {
+        width: 90%;
+    }
+}

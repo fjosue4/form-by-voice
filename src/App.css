@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #1B1D28;
+  color: #fff !important;
+  font-family: Raleway, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+a {
+  color: #229B94;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: Raleway, Helvetica, sans-serif;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 1.4rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.primary-btn {
+  background-color: #229B94;
+}
+
+.btn:hover {
+  background-color: #076460;
+  transition: 0.2s;
+}
+
+.secondary-btn {
+  background-color: #8F8F8F;
+}
+
+.secondary-btn:hover {
+  background-color: #666666;
+}
+
+.buttom-multiline {
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.048rem;
+  letter-spacing: 0.0048rem;
+}
+
+p {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.sad-icon {
+  font-size: 8rem;
+}
+
+.loading-bar-container {
+  background-color: #3F4048;
+  width: 200px;
+  border-radius: 1.4rem;
+  margin: 2.48rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-text {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 25%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.loading-bar {
+  position: relative;
+  background-color: #3F4048;
+  width: 100%;
+  border-radius: 1.4rem;
+  height: 40px;
+  animation: fill 5s linear forwards;
+}
+
+.email-bar {
+  animation: fill 10s linear forwards !important;
+}
+
+.loading-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.final-result {
+  -webkit-animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.result-summary {
+  background-color: #3F4048;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  text-align: left;
+  line-height: 1.4rem;
+}
+
+audio {
+  display: none;
+}
+
+.summary-loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 6rem;
+  margin: 4rem 0;
+}
+
+.summary-loader:before,
+.summary-loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsOut 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+
+.summary-loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1rem #fff;
+  animation-name: pulsIn;
+}
+
+.summary-loader:after {
+  width: calc(100% - 2rem);
+  padding-bottom: calc(100% - 2rem);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+.web-alert {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #CC3300;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+
+/* Animation */
+
+@keyframes fill {
+  0% {
+    transform: translateX(-100%);
+    background-color: #229B94;
+  }
+
+  100% {
+    transform: translateX(0%);
+    background-color: #229B94;
+  }
+}
+
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulsOut {
+
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 #fff;
+    opacity: 0;
+  }
+
+  100% {
+    box-shadow: 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-bck {
+  0% {
+    -webkit-transform: translateZ(80px);
+    transform: translateZ(80px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bck {
+  0% {
+    -webkit-transform: translateZ(80px);
+    transform: translateZ(80px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
