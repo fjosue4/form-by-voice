@@ -25,7 +25,7 @@ function Preview() {
     function clearTranscription(str, type) {
         let noSymbols = str.toLowerCase().replace(/[^a-zA-Z0-9.@ ]/g, '')
         if (type === 'name' || type === 'company') {
-            let clearName = noSymbols.replace(/(my name is|hi i am|hi im|hey i am|hey im|i work at|i |work for|i work for|my company name is|my company is|hello|hi|please|say|your|name)\s*/, '')
+            let clearName = noSymbols.replace(/(my name is|hi i am|hi im|hey i am|hey im|i work at|i work for|my company name is|the company name is|my company is|hello|hi|please|say|your|name)\s*/, '')
             let words = clearName.toLowerCase().split(' ')
             let UpperCaseName = words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
             return UpperCaseName
